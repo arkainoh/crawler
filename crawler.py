@@ -5,7 +5,8 @@ from bs4 import BeautifulSoup as bs
 # read from configuration
 chromedriver_path = '/webdriver/chromedriver'
 
-# login with cookie: https://stackoverflow.com/questions/45417335/python-use-cookie-to-login-with-selenium
+# login with cookie
+# reference: https://stackoverflow.com/questions/45417335/python-use-cookie-to-login-with-selenium
 def save_cookie(browser, path):
     with open(path, 'wb') as filehandler:
         pickle.dump(browser.get_cookies(), filehandler)
@@ -20,7 +21,7 @@ def load_cookie(browser, path):
 def open_browser(mode=''):
   options = ''
   # headless mode
-  # references: https://stackoverflow.com/questions/16180428/can-selenium-webdriver-open-browser-windows-silently-in-background
+  # reference: https://stackoverflow.com/questions/16180428/can-selenium-webdriver-open-browser-windows-silently-in-background
   if mode is 'invisible':
     options = webdriver.ChromeOptions()
     options.add_argument("headless")
