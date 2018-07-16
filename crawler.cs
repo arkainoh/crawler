@@ -6,6 +6,7 @@ using System.Threading;
   Tips:
   (1) If the browser doesn't show up, enable protected mode for all zones in the security tab of Internet Options, and apply zoom 100%.
   (2) If SendKeys() is too slow, use 32-bit IEDriverServer.exe instead of 64-bit one.
+  (3) If the browser(especially IE11) throws NoSuchWindow Exception, add the domain of the site(s) in trusted sites which is in the security tab of Internet Options.
 ****************************************************/
 
 // path of IEDriverServer: %PROJECT_PATH%\bin\Debug
